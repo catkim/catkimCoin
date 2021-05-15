@@ -46,6 +46,9 @@ class Blockchain{
 
 let catkimCoin = new Blockchain();
 catkimCoin.addBlock(new Block(1, '05/15/21', {amount:5}));
-catkimCoin.addBlock(new Block(2, '05/16/21', {amount: 7}));
-catkimCoin.addBlock(new Block(3, '05/17/21', {amount: 4}));
+catkimCoin.addBlock(new Block(2, '05/16/21', {amount:7}));
+catkimCoin.addBlock(new Block(3, '05/17/21', {amount:4}));
+console.log(catkimCoin.isChainValid());
+//tamper with block
+catkimCoin.chain[2].data = {amount:50};
 console.log(catkimCoin.isChainValid());
